@@ -1,0 +1,16 @@
+---
+- hosts: webservers 
+  become: True
+  tasks:
+
+    - name: Deploy static website
+      copy:
+        src: sample.war
+        dest: /usr/share/tomcat/webapps
+		
+    - name: enable tomcat startup
+      systemd:
+       name: tomcat
+       enabled: yes
+       state: restarted
+       become: true
