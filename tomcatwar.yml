@@ -7,7 +7,7 @@
       copy:
         src: sample.war
         dest: /usr/share/tomcat/webapps
-		
+    
     - name: enable tomcat startup
       systemd:
        name: tomcat
