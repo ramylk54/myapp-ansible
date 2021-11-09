@@ -13,4 +13,4 @@
        name: tomcat
        enabled: yes
        state: restarted
-       become: true
+
